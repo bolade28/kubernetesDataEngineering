@@ -6,7 +6,7 @@ executor: "KubernetesExecutor"
 dags:
   gitSync:
     enabled: true
-    repo: "https://github.com/bolade28/kubernetesDataEngineering.git"  # Replace with your Git repository
+    repo: "https://github.com/bolade28/kubernetesDataEngineering.git"
     branch: "main"  # Branch to sync
     rev: "HEAD"  # Revision to sync
     depth: 1  # Sync only the latest commit
