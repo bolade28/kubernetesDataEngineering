@@ -4,16 +4,11 @@ executor: "KubernetesExecutor"
 
 
 dags:
-  persistence:
-    enabled: false  # Disable PVC for DAGs since gitSync will be used
   gitSync:
     enabled: true
-    repo: "https://github.com/your-repo/your-dags.git"  # Replace with your Git repository
+    repo: "https://github.com/bolade28/kubernetesDataEngineering.git"  # Replace with your Git repository
     branch: "main"  # Branch to sync
-    revision: "HEAD"  # Revision to sync
+    rev: "HEAD"  # Revision to sync
     depth: 1  # Sync only the latest commit
-    syncInterval: 60s  # Time interval for syncing
     maxFailures: 0
-#    sshKeySecret: ""  # Optional: Secret containing SSH key for private repos
-#    credentialsSecret: ""  # Optional: Secret containing credentials for HTTPS repos
     subPath: "dags"  # Optional: Path to sync specific folders
